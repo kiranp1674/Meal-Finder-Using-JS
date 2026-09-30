@@ -80,6 +80,14 @@ Meal-Finder-Using-JS/
 * Handles category navigation
 * Handles user interactions
 
+## 🌐 Live Demo
+
+🚀 **[View Meal Finder Live](https://kiranp1674.github.io/Meal-Finder-Using-JS/)**
+
+Try the live application here:
+
+👉 https://kiranp1674.github.io/Meal-Finder-Using-JS/
+
 ## 🚀 How to Run
 
 ### 1. Clone the repository
