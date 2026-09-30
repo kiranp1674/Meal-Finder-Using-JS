@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><i class="fa-solid fa-utensils"></i><span>MEAL FINDER</span></div>
+    <button class="menu-button" id="openMenu" aria-label="Open categories"><i class="fa-solid fa-bars"></i></button>
+  </header>
+
+  <aside class="side-panel" id="sidePanel">
+    <button class="close-button" id="closeMenu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <h3>Categories</h3>
+    <div id="menuCategories"></div>
+  </aside>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <form class="search-box" id="searchForm">
+        <input id="searchInput" type="text" placeholder="Search recipes here..." autocomplete="off">
+        <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <h1>What are your favourite cuisine(s)?</h1>
+      <p>PERSONALIZE YOUR EXPERIENCE</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="content-section meals-section" id="mealsSection">
+      <div class="section-heading"><h2>MEALS</h2></div>
+      <div class="meal-grid" id="meals"></div>
+    </section>
+
+    <section class="content-section details-section" id="detailsSection">
+      <div class="breadcrumb" id="breadcrumb"></div>
+      <div id="mealDetails"></div>
+    </section>
+
+    <section class="content-section categories-section">
+      <div class="section-heading"><h2>CATEGORIES</h2></div>
+      <div class="category-grid" id="categories"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

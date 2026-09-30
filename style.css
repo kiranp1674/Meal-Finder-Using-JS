@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif
+}
+
+body {
+    margin: 0;
+    background: #f5f5f5;
+    color: #242424
+}
+
+.topbar {
+    height: 60px;
+    background: #ff4b0b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.brand i {
+    font-size: 20px
+}
+
+.menu-button {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer
+}
+
+.back-home {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600
+}
+
+.hero {
+    height: 410px;
+    background: linear-gradient(rgba(0, 0, 0, .48), rgba(0, 0, 0, .48)), url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff
+}
+
+.hero-small {
+    height: 300px
+}
+
+.hero-overlay {
+    width: 100%;
+    padding: 20px
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 30px 0 12px
+}
+
+.hero-small h1 {
+    margin: 10px 0;
+    font-size: 34px
+}
+
+.hero p {
+    font-size: 17px;
+    letter-spacing: 1px
+}
+
+.search-box {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px;
+    border-radius: 35px;
+    box-shadow: 0 4px 12px #777
+}
+
+.search-box input {
+    width: 280px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    padding: 0 24px;
+    border-radius: 30px;
+    font-size: 16px
+}
+
+.search-box button {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    background: #ff4b0b;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer
+}
+
+.content-section {
+    padding: 60px 20px
+}
+
+.section-heading {
+    margin-bottom: 45px
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin: 0
+}
+
+.section-heading h2:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff4b0b;
+    margin-top: 12px
+}
+
+.meal-grid,
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
+}
+
+.meal-card {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #d0d0d0;
+    cursor: pointer;
+    transition: .2s
+}
+
+.meal-card:hover {
+    transform: translateY(-5px)
+}
+
+.meal-card img {
+    display: block;
+    width: 100%;
+    height: 175px;
+    object-fit: cover
+}
+
+.meal-card h3 {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.35
+}
+
+.category-card {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #cfcfcf;
+    cursor: pointer
+}
+
+.category-card img {
+    display: block;
+    width: 62%;
+    height: 160px;
+    object-fit: contain;
+    margin: auto
+}
+
+.category-card span {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: #ff4b0b;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.side-panel {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: -310px;
+    width: 310px;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 10px #ccc;
+    transition: right .3s ease;
+    overflow: auto
+}
+
+.side-panel.open {
+    right: 0
+}
+
+.close-button {
+    display: block;
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    color: #ff4b0b;
+    font-size: 24px;
+    cursor: pointer
+}
+
+.side-panel h3 {
+    margin: 20px 0 10px;
+    font-size: 20px
+}
+
+.menu-item {
+    display: block;
+    width: 100%;
+    padding: 12px 5px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    text-align: left;
+    color: #555;
+    font-size: 15px;
+    cursor: pointer
+}
+
+.menu-item:hover {
+    color: #ff4b0b
+}
+
+.details-section {
+    display: none;
+    padding-top: 40px
+}
+
+.breadcrumb {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 18px;
+    background: #ff4b0b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px
+}
+
+.breadcrumb button,
+.breadcrumb a {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+    padding: 0
+}
+
+.breadcrumb span {
+    font-weight: 600
+}
+
+.meal-info {
+    max-width: 1000px;
+    margin: 20px auto 0;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    box-shadow: 0 2px 8px #ddd
+}
+
+.detail-image {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover
+}
+
+.meal-summary {
+    padding: 25px
+}
+
+.meal-summary h2 {
+    margin-top: 0;
+    font-size: 30px
+}
+
+.meal-summary p {
+    line-height: 1.6
+}
+
+.ingredients-box {
+    margin-top: 25px;
+    background: #ff4b0b;
+    color: #fff;
+    padding: 18px;
+    border-radius: 4px
+}
+
+.ingredients-box h3 {
+    margin-top: 0
+}
+
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.ingredient-list span {
+    background: rgba(255, 255, 255, .16);
+    padding: 7px 9px;
+    border-radius: 3px;
+    font-size: 13px
+}
+
+.detail-title {
+    max-width: 1000px;
+    margin: 28px auto 12px
+}
+
+.measure-box,
+.instructions-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 18px;
+    box-shadow: 0 2px 8px #ddd
+}
+
+.measure-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px
+}
+
+.measure-box p {
+    margin: 0;
+    padding: 10px;
+    background: #f3f3f3
+}
+
+.measure-box i,
+.instructions-box i {
+    color: #ff4b0b;
+    margin-right: 8px
+}
+
+.instructions-box p {
+    line-height: 1.65;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0
+}
+
+.instructions-box p:last-child {
+    border-bottom: 0
+}
+
+.status-message {
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+    grid-column: 1/-1
+}
+
+.categories-section {
+    padding-top: 20px
+}
+
+.category-grid {
+    padding-bottom: 20px
+}
+
+@media(max-width:900px) {
+
+    .meal-grid,
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .meal-info {
+        grid-template-columns: 1fr
+    }
+
+    .detail-image {
+        min-height: 300px
+    }
+
+    .measure-box {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:650px) {
+    .brand {
+        font-size: 19px
+    }
+
+    .hero {
+        height: 360px
+    }
+
+    .hero h1 {
+        font-size: 27px
+    }
+
+    .search-box {
+        width: 90%
+    }
+
+    .search-box input {
+        width: 100%
+    }
+
+    .meal-grid,
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .content-section {
+        padding: 45px 15px
+    }
+
+    .section-heading h2 {
+        font-size: 25px
+    }
+
+    .side-panel {
+        width: 280px
+    }
+
+    .meal-card img {
+        height: 145px
+    }
+
+    .category-card img {
+        height: 140px
+    }
+
+    .measure-box {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:430px) {
+
+    .meal-grid,
+    .category-grid {
+        grid-template-columns: 1fr
+    }
+
+    .hero h1 {
+        font-size: 23px
+    }
+
+    .hero p {
+        font-size: 14px
+    }
+
+    .meal-card img {
+        height: 190px
+    }
+
+    .category-card img {
+        height: 180px
+    }
+}
